@@ -21,14 +21,14 @@ public class Aula {
 
     @NotNull
     @ManyToOne
-    private Professor prof;
+    private Professor professor;
 
 
-    public Aula(@NotBlank @Size(min = 3, max = 12) String materia, @NotNull @PositiveOrZero Integer sala, @NotNull Professor prof) {
+    public Aula(@NotBlank @Size(min = 3, max = 12) String materia, @NotNull @PositiveOrZero Integer sala, @NotNull Professor professor) {
         this.id = id;
         this.materia = materia;
         this.sala = sala;
-        this.prof = prof;
+        this.professor = professor;
     }
 
     public Aula() {
@@ -59,12 +59,12 @@ public class Aula {
         this.sala = sala;
     }
 
-    public Professor getProf() {
-        return prof;
+    public Professor getProfessor() {
+        return professor;
     }
 
-    public void setProf(Professor professor) {
-        this.prof = professor;
+    public void setProfessor(Professor professor) {
+        this.professor = professor;
     }
 
     @Override
@@ -73,7 +73,7 @@ public class Aula {
                 "id=" + id +
                 ", materia='" + materia + '\'' +
                 ", sala=" + sala +
-                ", professor=" + prof +
+                ", professor=" + professor +
                 '}';
     }
 }

@@ -19,7 +19,7 @@ public class Professor {
     @Size(min = 3, max = 12)
     private String nome;
 
-    @OneToMany(mappedBy = "prof")
+    @OneToMany(mappedBy = "professor")
     @JsonIgnore
     private List<Aula> aula;
 

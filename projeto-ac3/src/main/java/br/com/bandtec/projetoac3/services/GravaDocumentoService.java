@@ -55,7 +55,7 @@ public class GravaDocumentoService {
             corpo = "02";
             corpo += String.format("%04d", i.getId());
             corpo += String.format("%-12s", i.getMateria());
-            corpo += String.format("%02d", i.getProf().getId());
+            corpo += String.format("%02d", i.getProfessor().getId());
             corpo += String.format("%02d", i.getSala());
             contRegDados++;
             gravaRegistro(nomeArq, corpo, true);

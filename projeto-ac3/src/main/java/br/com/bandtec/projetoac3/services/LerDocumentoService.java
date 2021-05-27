@@ -65,7 +65,7 @@ public class LerDocumentoService {
                         Aula aula = new Aula();
                         aula.setId(Integer.parseInt(registro.substring(2, 6)));
                         aula.setMateria(registro.substring(6, 18).trim());
-                        aula.setProf(new Professor(Integer.parseInt(registro.substring(18, 20))));
+                        aula.setProfessor(new Professor(Integer.parseInt(registro.substring(18, 20))));
                         ;
                         aula.setSala(Integer.parseInt(registro.substring(20, 22)));
                         System.out.println();

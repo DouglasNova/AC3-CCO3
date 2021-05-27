@@ -70,7 +70,7 @@ class SecretariaControllerTest {
         ResponseEntity resposta = secretariaController.getProfessor("1");
 
         assertEquals(202, resposta.getStatusCodeValue());
-        assertEquals("analisando", resposta.getBody());
+        assertEquals("analisando a contratação", resposta.getBody());
     }
 
     @Test
@@ -80,7 +80,7 @@ class SecretariaControllerTest {
         ResponseEntity resposta = secretariaController.getProfessor("1");
 
         assertEquals(200, resposta.getStatusCodeValue());
-        assertNull(resposta.getBody());
+        assertEquals("contratado", resposta.getBody());
     }
 
     @Test

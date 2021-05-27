@@ -56,10 +56,10 @@ public class SecretariaController {
     public ResponseEntity getProfessor(@PathVariable String uuid) {
         if (contratacaoService.Concluido.contains(uuid)) {
             contratacaoService.Concluido.remove(uuid);
-            return ResponseEntity.status(200).build();
+            return ResponseEntity.status(200).body("contratado");
         }
         if (contratacaoService.aguardando.contains(uuid)) {
-            return ResponseEntity.status(202).body("analisando");
+            return ResponseEntity.status(202).body("analisando a contratação");
         }
         return ResponseEntity.status(404).build();
     }
